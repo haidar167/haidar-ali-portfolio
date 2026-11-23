@@ -31,7 +31,7 @@ export const profile = {
   // ← EDIT: Your real links (set to "#" until you have them)
   upworkUrl: "#", // e.g. "https://www.upwork.com/freelancers/yourid"
   githubUrl: "#", // e.g. "https://github.com/yourusername"
-  linkedinUrl: "#", // e.g. "https://www.linkedin.com/in/yourname"
+  linkedinUrl: "https://www.linkedin.com/in/haidar-ali-192abc533b",
 
   // ← EDIT: Hero stats — put your own numbers here
   stats: [
