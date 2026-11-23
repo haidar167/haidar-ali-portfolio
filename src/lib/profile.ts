@@ -80,6 +80,27 @@ export const services = [
       "Is your site slow? I audit, optimize and rebuild until your Core Web Vitals are green and your users are happy.",
     tags: ["Core Web Vitals", "Audits", "Optimization"],
   },
+  {
+    icon: "Wrench",
+    title: "Website Repair & Rescue",
+    description:
+      "Broken pages, bugs, errors or a messy site? I diagnose and fix it fast — or redesign it into something you're proud of.",
+    tags: ["Bug Fixes", "Redesign", "Recovery"],
+  },
+  {
+    icon: "Megaphone",
+    title: "Ads & Promotion",
+    description:
+      "Meta and Google ad campaigns plus high-converting landing pages that turn your ad budget into real customers.",
+    tags: ["Meta Ads", "Google Ads", "Landing Pages"],
+  },
+  {
+    icon: "Clapperboard",
+    title: "Video Creation",
+    description:
+      "Eye-catching promo videos, product showcases and social media reels that make your brand impossible to scroll past.",
+    tags: ["Promo Videos", "Product Ads", "Reels"],
+  },
 ];
 
 // ---------- PROJECTS (the "Live Products I've Shipped" section) ----------

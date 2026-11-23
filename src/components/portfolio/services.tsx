@@ -7,6 +7,9 @@ import {
   BarChart3,
   Plug,
   Rocket,
+  Wrench,
+  Megaphone,
+  Clapperboard,
 } from "lucide-react";
 import { services } from "@/lib/profile";
 import { FadeIn, SectionHeading } from "./shared";
@@ -18,6 +21,9 @@ const iconMap = {
   BarChart3,
   Plug,
   Rocket,
+  Wrench,
+  Megaphone,
+  Clapperboard,
 } as const;
 
 export function Services() {
