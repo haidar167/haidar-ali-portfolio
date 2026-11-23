@@ -57,3 +57,10 @@ server.log
 .env.local
 db/
 *.db
+
+# Sandbox scaffolding (not part of the portfolio)
+.zscripts/
+download/
+examples/
+mini-services/
+Caddyfile
