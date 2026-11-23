@@ -13,7 +13,9 @@ export const profile = {
   // ← EDIT: Your profile photo — replace public/avatar.png with your own
   //   photo (keep the same file name) and it will appear automatically.
   //   Or change the line below to point to another image, e.g. "/me.jpg"
-  photo: "/avatar.png",
+  // Relative path so the photo works on localhost, Node hosts and
+  // GitHub Pages (project site under /haidar-ali-portfolio/) alike.
+  photo: "avatar.png",
 
   // ← EDIT: Your main role shown as the hero headline
   role: "Web Developer",

@@ -25,37 +25,53 @@ export function Contact() {
       return;
     }
     setStatus("loading");
+
+    // Primary delivery: FormSubmit (works on static hosts like GitHub Pages
+    // and forwards the message straight to the owner's Gmail inbox).
+    // Fallback: the /api/contact database route (used on full servers,
+    // e.g. local development or a Node host).
+    const formsubmit = fetch(`https://formsubmit.co/ajax/${profile.email}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: `New inquiry from ${form.name}`,
+        email: form.email,
+        message: form.message,
+        _subject: `New portfolio inquiry from ${form.name}`,
+        _template: "table",
+      }),
+    });
+
+    const api = fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    let emailSent = false;
+    let stored = false;
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (!res.ok) throw new Error("Request failed");
+      emailSent = (await formsubmit).ok;
+    } catch {
+      emailSent = false;
+    }
+    try {
+      stored = (await api).ok;
+    } catch {
+      stored = false;
+    }
+
+    if (emailSent || stored) {
       setStatus("sent");
       setForm({ name: "", email: "", message: "" });
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out — I'll reply within 24 hours.",
       });
-
-      // Email notification to the portfolio owner (best-effort, background).
-      // The message is already saved to the database above — this just
-      // forwards a copy to the owner's Gmail inbox via FormSubmit.
-      void fetch(`https://formsubmit.co/ajax/${profile.email}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: `New inquiry from ${form.name}`,
-          email: form.email,
-          message: form.message,
-          _subject: `New portfolio inquiry from ${form.name}`,
-          _template: "table",
-        }),
-      }).catch(() => {
-        // Email forwarding is optional — the DB record above already succeeded.
-      });
-    } catch {
+    } else {
       setStatus("idle");
       toast({
         title: "Something went wrong",
