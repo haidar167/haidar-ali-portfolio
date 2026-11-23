@@ -44,10 +44,22 @@ bun run db:push   # create the SQLite database
 bun run dev       # start on http://localhost:3000
 ```
 
-## Deploy
+## Deploy to Vercel (free, ~2 minutes)
 
-Works out of the box on Vercel (and most Node hosts). For production, swap the
-SQLite datasource in `prisma/schema.prisma` to PostgreSQL/MySQL if needed.
+The site is designed to go live straight from this GitHub repository:
+
+1. Go to [vercel.com](https://vercel.com) → **Sign Up / Log In with GitHub**
+2. Click **Add New → Project**, then **Import** the `haidar-ali-portfolio` repository
+3. Before clicking Deploy, open **Environment Variables** and add:
+   - Name: `DATABASE_URL`
+   - Value: `file:./db/custom.db`
+4. Click **Deploy** — you get a live URL like `haidar-ali-portfolio.vercel.app`
+
+Every future `git push` to `main` redeploys automatically.
+
+> Note: the contact form always delivers messages to your email (via FormSubmit).
+> The database backup is best-effort on serverless hosts — for guaranteed
+> storage, switch `prisma/schema.prisma` to PostgreSQL/MySQL (e.g. Supabase).
 
 ---
 
