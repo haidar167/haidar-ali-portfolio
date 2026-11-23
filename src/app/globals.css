@@ -231,6 +231,12 @@
   color: var(--violet);
   box-shadow: 0 0 18px rgba(168, 85, 247, 0.18);
 }
+.icon-chip-whatsapp {
+  background: rgba(37, 211, 102, 0.12);
+  border-color: rgba(37, 211, 102, 0.35);
+  color: #25d366;
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.2);
+}
 
 /* section label pill */
 .section-pill {

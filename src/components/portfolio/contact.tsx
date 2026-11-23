@@ -4,6 +4,11 @@ import { useState } from "react";
 import { Loader2, Mail, Send, Github, Linkedin, Sparkles } from "lucide-react";
 import { profile } from "@/lib/profile";
 import { FadeIn, SectionHeading } from "./shared";
+import {
+  WhatsAppIcon,
+  whatsappLink,
+  whatsappGreeting,
+} from "./whatsapp-button";
 import { toast } from "@/hooks/use-toast";
 
 type Status = "idle" | "loading" | "sent";
@@ -35,6 +40,23 @@ export function Contact() {
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out — I'll reply within 24 hours.",
+      });
+
+      // Email notification to the portfolio owner (best-effort, background).
+      // The message is already saved to the database above — this just
+      // forwards a copy to the owner's Gmail inbox via FormSubmit.
+      void fetch(`https://formsubmit.co/ajax/${profile.email}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: `New inquiry from ${form.name}`,
+          email: form.email,
+          message: form.message,
+          _subject: `New portfolio inquiry from ${form.name}`,
+          _template: "table",
+        }),
+      }).catch(() => {
+        // Email forwarding is optional — the DB record above already succeeded.
       });
     } catch {
       setStatus("idle");
@@ -181,6 +203,25 @@ export function Contact() {
                   </p>
                   <p className="mt-1 truncate text-sm font-semibold text-white group-hover:text-[#a855f7]">
                     Hire me on Upwork
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href={whatsappLink(profile.whatsappNumber, whatsappGreeting)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="panel group flex items-center gap-4 p-5"
+              >
+                <span className="icon-chip icon-chip-whatsapp shrink-0">
+                  <WhatsAppIcon className="h-5 w-5" />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
+                    Fastest reply
+                  </p>
+                  <p className="mt-1 truncate text-sm font-semibold text-white group-hover:text-[#25D366]">
+                    Chat on WhatsApp
                   </p>
                 </div>
               </a>

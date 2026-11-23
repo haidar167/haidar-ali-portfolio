@@ -14,7 +14,8 @@ contact form that saves messages to a database.
 - **Process** — 4-step "idea to launch" timeline
 - **Tech stack** — categorized tools grid
 - **Why work with me** — trust points
-- **Contact form** — saves messages to SQLite via Prisma (`/api/contact`), toast notifications
+- **Contact form** — saves messages to SQLite via Prisma (`/api/contact`), toast notifications, and forwards a copy to the owner's email inbox via FormSubmit (activate it once from the email link sent after the first submission)
+- **WhatsApp** — floating WhatsApp chat button (bottom-right) + contact card, powered by `whatsappNumber` in `src/lib/profile.ts`
 - Fully responsive with a mobile hamburger menu, scroll-reveal animations (Framer Motion)
 
 ## Edit your content in ONE file

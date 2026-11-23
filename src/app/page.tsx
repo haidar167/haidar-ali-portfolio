@@ -8,6 +8,7 @@ import { TechStack } from "@/components/portfolio/tech-stack";
 import { WhyMe } from "@/components/portfolio/why-me";
 import { Contact } from "@/components/portfolio/contact";
 import { Footer } from "@/components/portfolio/footer";
+import { WhatsAppFloatingButton } from "@/components/portfolio/whatsapp-button";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFloatingButton />
     </div>
   );
 }

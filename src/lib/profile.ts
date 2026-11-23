@@ -28,6 +28,11 @@ export const profile = {
   // ← EDIT: Your contact email (shown in contact section and footer)
   email: "haidar904455@gmail.com",
 
+  // ← SEND ME YOUR WHATSAPP NUMBER (with country code, digits only —
+  //   e.g. Pakistan: "923001234567") and it will replace the placeholder.
+  //   Powers the floating WhatsApp button and the contact card below.
+  whatsappNumber: "923001234567",
+
   // ← EDIT: Your real links (set to "#" until you have them)
   upworkUrl: "#", // e.g. "https://www.upwork.com/freelancers/yourid"
   githubUrl: "#", // e.g. "https://github.com/yourusername"
