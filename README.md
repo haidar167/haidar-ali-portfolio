@@ -1,8 +1,10 @@
 # My Portfolio — Dark Neon Developer Portfolio
 
+**Live site: https://haidar167.github.io/haidar-ali-portfolio/** (GitHub Pages)
+
 A one-page personal portfolio for a web developer, built in the style of modern
-"dark + neon" developer sites. Fast, responsive, animated — with a working
-contact form that saves messages to a database.
+"dark + neon" developer sites. Fast, responsive, animated — the contact form
+delivers messages straight to the owner's Gmail inbox via FormSubmit.
 
 ## Features
 
