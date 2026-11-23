@@ -10,6 +10,11 @@ export const profile = {
   // ← EDIT: A short brand mark for the navbar logo (e.g. "AH." or "DevStudio")
   initials: "YN",
 
+  // ← EDIT: Your profile photo — replace public/avatar.png with your own
+  //   photo (keep the same file name) and it will appear automatically.
+  //   Or change the line below to point to another image, e.g. "/me.jpg"
+  photo: "/avatar.png",
+
   // ← EDIT: Your main role shown as the hero headline
   role: "Web Developer",
 

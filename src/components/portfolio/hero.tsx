@@ -56,6 +56,25 @@ export function Hero() {
             </span>
           </motion.div>
 
+          {/* Mobile avatar (desktop uses the one beside the terminal) */}
+          <motion.div variants={item} className="mt-8 flex justify-center lg:hidden">
+            <div className="relative">
+              <div
+                className="absolute -inset-1 rounded-full bg-gradient-to-tr from-[#00ff88] via-[#00ff88]/50 to-[#a855f7] opacity-90 blur-[3px]"
+                aria-hidden="true"
+              />
+              {/* ← EDIT: Replace public/avatar.png with your own photo (same filename) */}
+              <img
+                src={profile.photo}
+                alt={`Profile photo of ${profile.name}`}
+                className="relative h-28 w-28 rounded-full border-2 border-[#050505] object-cover"
+              />
+              <span className="absolute bottom-1 right-1 flex h-7 w-7 items-center justify-center rounded-full border border-[#00ff88]/40 bg-[#050505]">
+                <span className="pulse-dot" />
+              </span>
+            </div>
+          </motion.div>
+
           <motion.h1
             variants={item}
             className="mt-7 text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-[4.2rem]"
@@ -116,13 +135,31 @@ export function Hero() {
           </motion.dl>
         </motion.div>
 
-        {/* Right: terminal card */}
+        {/* Right: avatar + terminal card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="relative hidden lg:block"
         >
+          {/* Profile photo with neon ring */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div
+                className="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-[#00ff88] via-[#00ff88]/50 to-[#a855f7] opacity-90 blur-[3px]"
+                aria-hidden="true"
+              />
+              <img
+                src={profile.photo}
+                alt={`Profile photo of ${profile.name}`}
+                className="relative h-44 w-44 rounded-full border-2 border-[#050505] object-cover"
+              />
+              <span className="absolute bottom-2 right-2 flex h-9 w-9 items-center justify-center rounded-full border border-[#00ff88]/40 bg-[#050505]">
+                <span className="pulse-dot" />
+              </span>
+            </div>
+          </div>
+
           <div className="panel overflow-hidden">
             {/* window bar */}
             <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.03] px-4 py-3">
