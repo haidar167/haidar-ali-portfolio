@@ -5,10 +5,10 @@
 
 export const profile = {
   // ← EDIT: Type your real name here (shown in navbar, hero and footer)
-  name: "Your Name",
+  name: "Haidar Ali",
 
   // ← EDIT: A short brand mark for the navbar logo (e.g. "AH." or "DevStudio")
-  initials: "YN",
+  initials: "HA",
 
   // ← EDIT: Your profile photo — replace public/avatar.png with your own
   //   photo (keep the same file name) and it will appear automatically.
@@ -26,7 +26,7 @@ export const profile = {
     "Slow load times, outdated designs, ideas stuck in your head — I build fast, modern web products that turn visitors into customers and businesses into brands.",
 
   // ← EDIT: Your contact email (shown in contact section and footer)
-  email: "hello@yourname.dev",
+  email: "haidar904455@gmail.com",
 
   // ← EDIT: Your real links (set to "#" until you have them)
   upworkUrl: "#", // e.g. "https://www.upwork.com/freelancers/yourid"

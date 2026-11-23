@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name — Web Developer Portfolio",
+  title: "Haidar Ali — Web Developer Portfolio",
   description:
     "Web Developer building fast, modern websites, web apps, e-commerce stores and dashboards. Custom sites that turn visitors into customers.",
-  keywords: ["Web Developer", "Portfolio", "Next.js", "React", "Freelance Developer"],
+  keywords: ["Haidar Ali", "Web Developer", "Portfolio", "Next.js", "React", "Freelance Developer"],
   openGraph: {
-    title: "Your Name — Web Developer",
+    title: "Haidar Ali — Web Developer",
     description: "Fast, modern web products delivered with daily updates.",
     type: "website",
   },
