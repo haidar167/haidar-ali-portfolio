@@ -19,7 +19,7 @@ export const profile = {
   role: "Web Developer",
 
   // ← EDIT: Short punchy line under the headline (services you offer)
-  tagline: "Custom Websites · Web Apps · E-commerce · Dashboards · APIs",
+  tagline: "Custom Websites · Web Apps · E-commerce · AI Agents · Dashboards · APIs",
 
   // ← EDIT: One or two sentences about what you do for clients
   description:
@@ -36,6 +36,7 @@ export const profile = {
   upworkUrl: "#", // e.g. "https://www.upwork.com/freelancers/yourid"
   githubUrl: "#", // e.g. "https://github.com/yourusername"
   linkedinUrl: "https://www.linkedin.com/in/haidar-ali-192abc533b",
+  orcidUrl: "https://orcid.org/0009-0008-3278-5582",
 
   // ← EDIT: Hero stats — put your own numbers here
   stats: [
@@ -109,6 +110,20 @@ export const services = [
     description:
       "Eye-catching promo videos, product showcases and social media reels that make your brand impossible to scroll past.",
     tags: ["Promo Videos", "Product Ads", "Reels"],
+  },
+  {
+    icon: "Bot",
+    title: "AI Text Agent",
+    description:
+      "A custom AI chatbot trained on your business that answers customer questions, captures leads and chats 24/7 on your website or WhatsApp.",
+    tags: ["AI Chatbots", "24/7 Replies", "Lead Capture"],
+  },
+  {
+    icon: "AudioLines",
+    title: "AI Voice Agent",
+    description:
+      "An AI voice assistant that picks up calls, answers in a natural voice and books appointments — even while you sleep.",
+    tags: ["Voice Bots", "Call Handling", "Auto Bookings"],
   },
 ];
 
@@ -216,6 +231,10 @@ export const techStack = [
   {
     category: "E-Commerce",
     items: ["Shopify", "WooCommerce", "PayPal", "Inventory Systems"],
+  },
+  {
+    category: "AI & Agents",
+    items: ["Text Agents", "Voice Agents", "Chatbots", "LLM APIs"],
   },
   {
     category: "Workflow & Tools",

@@ -10,6 +10,8 @@ import {
   Wrench,
   Megaphone,
   Clapperboard,
+  Bot,
+  AudioLines,
 } from "lucide-react";
 import { services } from "@/lib/profile";
 import { FadeIn, SectionHeading } from "./shared";
@@ -24,6 +26,8 @@ const iconMap = {
   Wrench,
   Megaphone,
   Clapperboard,
+  Bot,
+  AudioLines,
 } as const;
 
 export function Services() {
@@ -34,7 +38,7 @@ export function Services() {
           pill="Services"
           title="What I"
           highlight="Build"
-          description="Everything you need to launch, run and grow your business online — designed, built and deployed by one person."
+          description="Everything you need to launch, run and grow your business online — from websites and AI agents to ads and video, all built by one person."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

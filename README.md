@@ -7,7 +7,7 @@ contact form that saves messages to a database.
 ## Features
 
 - **Hero** — neon headline, profile photo with glowing ring, animated code terminal, live stats
-- **Services** — 9 offering cards (websites, web apps, e-commerce, dashboards, APIs, performance, website repair, ads & promotion, video creation)
+- **Services** — 11 offering cards (websites, web apps, e-commerce, dashboards, APIs, performance, website repair, ads & promotion, video creation, AI text agent, AI voice agent)
 - **Philosophy strip** — what you get vs. what most developers give you
 - **Portfolio** — live project cards with tech tags
 - **Testimonials** — client quotes with star ratings

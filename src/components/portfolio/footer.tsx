@@ -2,6 +2,20 @@
 
 import { ArrowUp } from "lucide-react";
 import { profile, navLinks, services, footerTagline } from "@/lib/profile";
+import { OrcidIcon } from "./orcid-icon";
+
+function LinkedinGlyph({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+    </svg>
+  );
+}
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -18,6 +32,26 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-zinc-400">
               {footerTagline}
             </p>
+            <div className="mt-5 flex items-center gap-3">
+              <a
+                href={profile.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-zinc-400 transition-colors hover:border-[#00ff88]/40 hover:text-[#00ff88]"
+              >
+                <LinkedinGlyph className="h-4 w-4" />
+              </a>
+              <a
+                href={profile.orcidUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ORCID profile"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 transition-opacity hover:opacity-80"
+              >
+                <OrcidIcon className="h-[18px] w-[18px]" />
+              </a>
+            </div>
           </div>
 
           {/* Services list */}

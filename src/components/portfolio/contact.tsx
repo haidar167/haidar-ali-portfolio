@@ -4,11 +4,8 @@ import { useState } from "react";
 import { Loader2, Mail, Send, Github, Linkedin, Sparkles } from "lucide-react";
 import { profile } from "@/lib/profile";
 import { FadeIn, SectionHeading } from "./shared";
-import {
-  WhatsAppIcon,
-  whatsappLink,
-  whatsappGreeting,
-} from "./whatsapp-button";
+import { WhatsAppIcon, whatsappLink, whatsappGreeting } from "./whatsapp-button";
+import { OrcidIcon } from "./orcid-icon";
 import { toast } from "@/hooks/use-toast";
 
 type Status = "idle" | "loading" | "sent";
@@ -248,6 +245,15 @@ export function Contact() {
                     className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-zinc-400 transition-colors hover:border-[#00ff88]/40 hover:text-[#00ff88]"
                   >
                     <Linkedin className="h-4.5 w-4.5" aria-hidden="true" />
+                  </a>
+                  <a
+                    href={profile.orcidUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="ORCID profile"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 transition-opacity hover:opacity-80"
+                  >
+                    <OrcidIcon className="h-5 w-5" />
                   </a>
                 </div>
               </div>
